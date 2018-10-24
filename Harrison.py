@@ -127,3 +127,8 @@ class ADXL345(object):
         """
         raw = self._device.readList(ADXL345_REG_DATAX0, 6)
         return struct.unpack('<hhh', raw)
+
+ADXL = ADXL();
+
+while True:
+	print ADXL.read();
